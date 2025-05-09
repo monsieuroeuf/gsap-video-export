@@ -270,7 +270,7 @@ The `--output-options` `-E` argument will take a string of FFmpeg output argumen
 
 ```bash
 # Video by @cassiecodes
-gsap-video-export https://codepen.io/cassie-codes/pen/VweQjBw -S svg -z 2 -v 1920x1080 -- -E "'-pix_fmt yuv420p -crf 1'"
+gsap-video-export https://codepen.io/cassie-codes/pen/VweQjBw -S svg -z 2 -v 1920x1080 -E "'-pix_fmt yuv420p -crf 1'"
 ```
 
 https://user-images.githubusercontent.com/49479599/154278049-ae6d585b-9491-45a8-bd2a-ea1f741580e2.mp4
@@ -313,9 +313,9 @@ Setting the `--color` argument to `transparent` will pad the video with transpar
 > There should be no `background-color` set on the <body> for `gsap-video-export` to correctly render transparency.
 
 ```bash
-gsap-video-export https://codepen.io/defaced/pen/GRVbwNQ -S svg -v 1080x1080 -o video.mov -p transparent -c prores_ks -C mov -- -E "'-pix_fmt yuva444p10le'"
+gsap-video-export https://codepen.io/defaced/pen/GRVbwNQ -S svg -v 1080x1080 -o video.mov -p transparent -c prores_ks -C mov -E "'-pix_fmt yuva444p10le'"
 ```
-The important part of the command is `-o video.mov -p transparent -c prores_ks -C mov -- -E "'-pix_fmt yuva444p10le'"` which sets ffmpeg to use a video format that's compatible with transparency and tells `gsap-video-export` to respect transparent backgrounds.
+The important part of the command is `-o video.mov -p transparent -c prores_ks -C mov -E "'-pix_fmt yuva444p10le'"` which sets ffmpeg to use a video format that's compatible with transparency and tells `gsap-video-export` to respect transparent backgrounds.
 
 ### Post Processing 🆕
 
