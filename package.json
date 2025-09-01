@@ -27,7 +27,6 @@
   "author": "Chris Johnson (https://defaced.dev)",
   "license": "MIT",
   "dependencies": {
-    "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "cli-progress": "^3.12.0",
     "eslint": "^9.15.0",
     "fluent-ffmpeg": "^2.1.3",

@@ -14,7 +14,7 @@ import tmp from 'tmp'
 import path from 'path'
 
 /* Video encoders */
-import { path as ffmpegPath } from '@ffmpeg-installer/ffmpeg'
+// import { path as ffmpegPath } from '@ffmpeg-installer/ffmpeg'
 import ffmpeg from 'fluent-ffmpeg'
 
 /* Command line helpers */
@@ -26,7 +26,7 @@ import { PNG } from 'pngjs'
 import rgbHex from 'rgb-hex'
 import fs from 'fs'
 
-ffmpeg.setFfmpegPath(ffmpegPath)
+// ffmpeg.setFfmpegPath(ffmpegPath) // turned off; use my local ffmpeg
 tmp.setGracefulCleanup() /* Better cleaup of tmp files */
 /* Colors */
 const colors = {
@@ -665,8 +665,9 @@ const videoExport = async (options) => {
       })
 
     /* Additional ffmpeg io options */
-    if (options['input-options']) render.inputOptions(...parseArgsStringToArgv(options['input-options'].slice(1, -1)))
-    if (options['output-options']) render.outputOptions(...parseArgsStringToArgv(options['output-options'].slice(1, -1)))
+    // turned off; interfered with ffmpeg rendering transparency
+    // if (options['input-options']) render.inputOptions(...parseArgsStringToArgv(options['input-options'].slice(1, -1)))
+    // if (options['output-options']) render.outputOptions(...parseArgsStringToArgv(options['output-options'].slice(1, -1)))
 
     render.run()
   })
